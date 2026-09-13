@@ -1,0 +1,1198 @@
+/* =========================================
+   OLIVER VILLANUEVA
+   PERSONAL INFORMATION PAGE
+   ========================================= */
+
+
+/* =========================
+   COLOR VARIABLES
+   ========================= */
+
+:root {
+
+    --dark: #17151f;
+    --dark-2: #211e2c;
+    --dark-3: #100f16;
+
+    --pink: #dca0bb;
+    --pink-light: #efc5d7;
+    --pink-dark: #b87898;
+
+    --cream: #f8f2f4;
+    --white: #ffffff;
+
+    --gray: #bdb5c0;
+    --gray-dark: #6f6670;
+
+    --border: rgba(220, 160, 187, 0.25);
+
+}
+
+
+/* =========================
+   GENERAL SETTINGS
+   ========================= */
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 80px;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family: "DM Sans", sans-serif;
+
+    background-color: var(--dark);
+
+    color: var(--white);
+
+    overflow-x: hidden;
+
+}
+
+
+/* Headings */
+
+h1,
+h2 {
+
+    font-family: "Playfair Display", serif;
+
+}
+
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.custom-navbar {
+
+    background-color: rgba(16, 15, 22, 0.88);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    padding: 14px 0;
+
+}
+
+
+/* Logo */
+
+.navbar-brand {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.7rem;
+
+    font-weight: 700;
+
+    color: var(--white) !important;
+
+    letter-spacing: 2px;
+
+}
+
+
+.navbar-brand span {
+
+    color: var(--pink);
+
+}
+
+
+/* Navigation links */
+
+.nav-link {
+
+    color: #d8d1d8 !important;
+
+    font-size: 0.88rem;
+
+    font-weight: 500;
+
+    margin-left: 10px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.nav-link:hover {
+
+    color: var(--pink-light) !important;
+
+}
+
+
+/* Mobile menu */
+
+.navbar-toggler {
+
+    border-color: rgba(255, 255, 255, 0.2);
+
+}
+
+
+.navbar-toggler:focus {
+
+    box-shadow: none;
+
+}
+
+
+/* =========================
+   HERO SECTION
+   ========================= */
+
+.hero-section {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 120px 0 70px;
+
+    position: relative;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(220, 160, 187, 0.14),
+            transparent 350px
+        ),
+
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(190, 170, 210, 0.08),
+            transparent 300px
+        ),
+
+        var(--dark);
+
+}
+
+
+/* Small uppercase heading */
+
+.small-title {
+
+    color: var(--pink);
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* Main heading */
+
+.hero-content h1 {
+
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+
+    line-height: 1.02;
+
+    max-width: 750px;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* Pink words */
+
+.hero-content h1 span {
+
+    color: var(--pink);
+
+}
+
+
+/* Description */
+
+.hero-description {
+
+    max-width: 650px;
+
+    color: var(--gray);
+
+    line-height: 1.8;
+
+    font-size: 1rem;
+
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.main-button {
+
+    background-color: var(--pink-dark);
+
+    color: white;
+
+    border: 1px solid var(--pink-dark);
+
+    border-radius: 50px;
+
+    padding: 12px 20px;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+
+}
+
+
+.main-button:hover {
+
+    background-color: var(--pink-light);
+
+    border-color: var(--pink-light);
+
+    color: var(--dark);
+
+    transform: translateY(-3px);
+
+}
+
+
+.second-button {
+
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-radius: 50px;
+
+    padding: 12px 20px;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+
+}
+
+
+.second-button:hover {
+
+    background-color: white;
+
+    color: var(--dark);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================
+   PROFILE IMAGE
+   ========================= */
+
+.profile-wrapper {
+
+    position: relative;
+
+    width: min(82%, 390px);
+
+    margin: 0 auto;
+
+    padding: 10px;
+
+    border: 1px solid rgba(220, 160, 187, 0.45);
+
+    border-radius: 30px;
+
+    background-color: rgba(255, 255, 255, 0.03);
+
+    transform: rotate(2deg);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* Glow behind image */
+
+.profile-decoration {
+
+    position: absolute;
+
+    width: 250px;
+
+    height: 250px;
+
+    background-color: rgba(220, 160, 187, 0.2);
+
+    border-radius: 50%;
+
+    filter: blur(60px);
+
+    z-index: -1;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+}
+
+
+/* Image */
+
+.profile-image {
+
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 23px;
+
+}
+
+
+/* Image label */
+
+.profile-label {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 25px;
+
+    padding: 8px 13px;
+
+    background-color: rgba(16, 15, 22, 0.9);
+
+    border: 1px solid var(--border);
+
+    border-radius: 50px;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 1.5px;
+
+    color: white;
+
+    transform: rotate(-2deg);
+
+}
+
+
+/* =========================
+   INTERACTIVE GREETING
+   ========================= */
+
+.greeting-box {
+
+    max-width: 580px;
+
+    padding: 18px;
+
+    background-color: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+}
+
+
+.greeting-box .form-label {
+
+    color: #ddd5df;
+
+    font-size: 0.82rem;
+
+}
+
+
+.greeting-box .form-control {
+
+    background-color: var(--dark-2);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: white;
+
+    padding: 11px;
+
+}
+
+
+.greeting-box .form-control:focus {
+
+    border-color: var(--pink);
+
+    box-shadow: none;
+
+}
+
+
+.greeting-box .form-control::placeholder {
+
+    color: #88818b;
+
+}
+
+
+.greeting-button {
+
+    background-color: var(--pink);
+
+    color: var(--dark);
+
+    border: none;
+
+    font-weight: 700;
+
+}
+
+
+.greeting-button:hover {
+
+    background-color: var(--pink-light);
+
+}
+
+
+.greeting-result {
+
+    margin: 12px 0 0;
+
+    min-height: 20px;
+
+    color: var(--pink-light);
+
+    font-size: 0.85rem;
+
+}
+
+
+/* =========================
+   GENERAL SECTION
+   ========================= */
+
+.section {
+
+    padding: 100px 0;
+
+}
+
+
+/* Dark sections */
+
+.dark-section {
+
+    background-color: var(--dark-3);
+
+}
+
+
+/* Light section */
+
+.light-section {
+
+    background-color: var(--cream);
+
+    color: var(--dark);
+
+}
+
+
+/* =========================
+   SECTION HEADINGS
+   ========================= */
+
+.section-heading {
+
+    max-width: 720px;
+
+}
+
+
+.section-heading.centered {
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+.section-heading h2 {
+
+    font-size: clamp(2.3rem, 5vw, 3.6rem);
+
+    margin-bottom: 18px;
+
+}
+
+
+.section-heading h2 span {
+
+    color: var(--pink);
+
+}
+
+
+.section-heading > p:last-child {
+
+    color: var(--gray);
+
+    line-height: 1.8;
+
+}
+
+
+/* Light section paragraph */
+
+.light-section .section-heading > p:last-child {
+
+    color: var(--gray-dark);
+
+}
+
+
+/* =========================
+   ABOUT CARDS
+   ========================= */
+
+.info-card {
+
+    height: 100%;
+
+    padding: 25px;
+
+    background-color: var(--dark-2);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 18px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.info-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: var(--border);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.card-number {
+
+    color: var(--pink);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.info-card h3 {
+
+    margin-top: 15px;
+
+    font-size: 1.05rem;
+
+}
+
+
+.info-card p {
+
+    color: var(--gray);
+
+    line-height: 1.6;
+
+    font-size: 0.88rem;
+
+    margin-bottom: 0;
+
+}
+
+
+/* =========================
+   SKILLS
+   ========================= */
+
+.skill-card {
+
+    height: 100%;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border: 1px solid #e7dfe3;
+
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.skill-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 45px rgba(55, 40, 50, 0.1);
+
+}
+
+
+.skill-number {
+
+    color: var(--pink-dark);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.skill-card h3 {
+
+    color: var(--dark);
+
+    margin-top: 15px;
+
+    margin-bottom: 10px;
+
+    font-size: 1.2rem;
+
+}
+
+
+.skill-card p {
+
+    color: var(--gray-dark);
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* Skill badges */
+
+.skill-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 20px;
+
+}
+
+
+.skill-tags span {
+
+    padding: 6px 10px;
+
+    background-color: #f7e8ef;
+
+    color: #8d5c72;
+
+    border-radius: 50px;
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact-box {
+
+    padding: clamp(25px, 5vw, 50px);
+
+    background-color: #1b1925;
+
+    border: 1px solid var(--border);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.2);
+
+}
+
+
+/* Form labels */
+
+.form-label {
+
+    color: #e6dfe6;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+}
+
+
+/* Inputs */
+
+.custom-input {
+
+    width: 100%;
+
+    max-width: 100%;
+
+    background-color: #252230;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: white;
+
+    border-radius: 12px;
+
+    padding: 12px 14px;
+
+}
+
+
+.custom-input:focus {
+
+    background-color: #252230;
+
+    color: white;
+
+    border-color: var(--pink);
+
+    box-shadow: 0 0 0 3px rgba(220, 160, 187, 0.1);
+
+}
+
+
+.custom-input::placeholder {
+
+    color: #88818c;
+
+}
+
+
+/* Form result */
+
+.form-result {
+
+    color: var(--pink-light);
+
+    font-size: 0.85rem;
+
+    margin-top: 15px;
+
+    margin-bottom: 0;
+
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+
+    background-color: #0a090e;
+
+    padding: 30px 20px;
+
+    margin-top: 0;
+
+    color: #938c96;
+
+    font-size: 0.78rem;
+
+    text-align: center;
+
+    border: none;
+
+    border-radius: 0;
+
+    width: 100%;
+
+}
+
+
+.footer p {
+
+    margin: 0;
+
+    line-height: 1.6;
+
+}
+
+
+.footer span {
+
+    color: var(--pink);
+
+    font-size: 1rem;
+
+}
+
+
+.footer strong {
+
+    color: var(--pink-light);
+
+}
+
+
+/* =========================
+   JAVASCRIPT ANIMATION
+   ========================= */
+
+.highlight-text {
+
+    color: var(--pink-light) !important;
+
+    transition: 0.3s ease;
+
+}
+
+
+.show-result {
+
+    animation: resultAnimation 0.4s ease;
+
+}
+
+
+@keyframes resultAnimation {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+
+/* Tablet */
+
+@media (max-width: 991px) {
+
+    .hero-section {
+
+        text-align: center;
+
+    }
+
+
+    .hero-description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .hero-content {
+
+        margin-bottom: 60px;
+
+    }
+
+
+    .greeting-box {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        text-align: left;
+
+    }
+
+
+    .profile-wrapper {
+
+        width: min(75%, 350px);
+
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 575px) {
+
+    .hero-section {
+
+        padding-top: 110px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 2.65rem;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 0.9rem;
+
+    }
+
+
+    .section {
+
+        padding: 70px 0;
+
+    }
+
+
+    .profile-wrapper {
+
+        width: 82%;
+
+    }
+
+
+    .profile-label {
+
+        left: 15px;
+
+        bottom: 15px;
+
+        font-size: 0.55rem;
+
+    }
+
+
+    .greeting-box {
+
+        padding: 14px;
+
+    }
+
+
+    .contact-box {
+
+        padding: 25px 18px;
+
+    }
+
+}
+
+
+/* =========================
+   SOCIAL / CONTACT CARDS
+   ========================= */
+
+.contact-links {
+
+    margin-top: 25px;
+
+}
+
+
+/* Individual contact card */
+
+.contact-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    width: 100%;
+
+    padding: 15px;
+
+    text-decoration: none;
+
+    background-color: #24212f;
+
+    border: 1px solid rgba(220, 160, 187, 0.16);
+
+    border-radius: 15px;
+
+    color: white;
+
+    transition: 0.3s ease;
+
+}
+
+
+/* Hover effect */
+
+.contact-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: rgba(220, 160, 187, 0.45);
+
+    background-color: #2a2637;
+
+    color: white;
+
+}
+
+
+/* Contact icon */
+
+.contact-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    min-width: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: rgba(220, 160, 187, 0.12);
+
+    border: 1px solid rgba(220, 160, 187, 0.25);
+
+    color: var(--pink-light);
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+
+}
+
+
+/* Contact category */
+
+.contact-card small {
+
+    display: block;
+
+    color: var(--pink);
+
+    font-size: 0.58rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 3px;
+
+}
+
+
+/* Contact username / number */
+
+.contact-card strong {
+
+    display: block;
+
+    color: #eee7ed;
+
+    font-size: 0.78rem;
+
+    font-weight: 500;
+
+}
+
+
+/* =========================
+   MOBILE CONTACT CARDS
+   ========================= */
+
+@media (max-width: 575px) {
+
+    .contact-card {
+
+        padding: 13px;
+
+    }
+
+    .contact-icon {
+
+        width: 38px;
+
+        height: 38px;
+
+        min-width: 38px;
+
+        font-size: 1rem;
+
+    }
+
+}
